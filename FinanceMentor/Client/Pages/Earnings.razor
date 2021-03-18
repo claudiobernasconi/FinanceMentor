@@ -1,9 +1,69 @@
-﻿@page "/earnings" 
+﻿@page "/earnings"
 @using FinanceMentor.Client.Components;
+@using System.Globalization;
+@using FinanceMentor.Shared;
+@inject HttpClient Http;
 
-<h3>Earnings</h3>
-<EarningForm></EarningForm>
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                Earnings
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Subject</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (earnings == null)
+                        {
+                            <tr><td><em>Loading...</em></td></tr>
+                        }
+                        else
+                        {
+                            @foreach (var earning in earnings)
+                            {
+                                <tr>
+                                    <td>@earning.Date.ToShortDateString()</td>
+                                    <td>@earning.Category</td>
+                                    <td>@earning.Subject</td>
+                                    <td>@earning.Amount.ToString("C2", CultureInfo.CreateSpecificCulture("en-US"))</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <EarningForm OnSubmitCallback="@Refresh"></EarningForm>
+    </div>
+</div>
+<div>&nbsp;</div>
 
 @code {
+    private Earning[] earnings;
 
+    protected async override Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        earnings = await Http.GetFromJsonAsync<Earning[]>("api/Earnings");
+        StateHasChanged();
+    }
+
+    public async void Refresh()
+    {
+        await LoadData();
+    }
 }
