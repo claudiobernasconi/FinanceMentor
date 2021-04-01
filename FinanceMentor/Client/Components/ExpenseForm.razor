@@ -1,0 +1,53 @@
+﻿@using FinanceMentor.Shared;
+@inject HttpClient Http;
+
+<div class="card">
+    <div class="card-header">
+        Add an expense
+    </div>
+    <div class="card-body">
+        <EditForm Model="@earning" OnValidSubmit="@HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-group">
+                <label for="dateInput">Date</label>
+                <InputDate class="form-control" id="dateInput" @bind-Value="earning.Date" />
+            </div>
+            <div class="form-group">
+                <label for="subjectInput">Subject</label>
+                <InputText class="form-control" id="subjectInput" @bind-Value="earning.Subject" />
+            </div>
+            <div class="form-group">
+                <label for="categoryInput">Category</label>
+                <InputSelect class="form-control" id="categoryInput" @bind-Value="earning.Category">
+                    @{
+                        foreach (var value in Enum.GetValues(typeof(ExpenseCategory)))
+                        {
+                            <option value="@value">@value</option>
+                        }
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group">
+                <label for="amountInput">Amount</label>
+                <InputNumber class="form-control" id="amountInput" @bind-Value="earning.Amount" />
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private ExpenseModel earning = new ExpenseModel { Date = DateTime.Today };
+
+    [Parameter]
+    public EventCallback OnSubmitCallback { get; set; }
+
+    public async Task HandleValidSubmit()
+    {
+        await Http.PostAsJsonAsync<ExpenseModel>("api/Expenses", earning);
+        await OnSubmitCallback.InvokeAsync();
+    }
+}

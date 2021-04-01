@@ -26,5 +26,24 @@ namespace FinanceMentor.Server
 
             services.AddSingleton<IRepository<Earning>>(earningRepository);
         }
+
+        public static void AddExpensesRepository(this IServiceCollection services)
+        {
+            var today = DateTime.Today;
+            var lastMonth = DateTime.Today.AddMonths(-1);
+            var previousMonth = DateTime.Today.AddMonths(-2);
+
+            var expensesRepository = new MemoryRepository<Expense>();
+
+            expensesRepository.Add(new Expense { Date = new DateTime(previousMonth.Year, previousMonth.Month, 8), Amount = 1050, Category = ExpenseCategory.Housing, Subject = "Rent" });
+            expensesRepository.Add(new Expense { Date = new DateTime(previousMonth.Year, previousMonth.Month, 18), Amount = 140, Category = ExpenseCategory.Education, Subject = "Books" });
+            expensesRepository.Add(new Expense { Date = new DateTime(lastMonth.Year, lastMonth.Month, 6), Amount = 1050, Category = ExpenseCategory.Housing, Subject = "Rent" });
+            expensesRepository.Add(new Expense { Date = new DateTime(lastMonth.Year, lastMonth.Month, 15), Amount = 415, Category = ExpenseCategory.Healthcare, Subject = "H-Care" });
+            expensesRepository.Add(new Expense { Date = new DateTime(lastMonth.Year, lastMonth.Month, 27), Amount = 76, Category = ExpenseCategory.Entertainment, Subject = "Harry Potter Series" });
+            expensesRepository.Add(new Expense { Date = new DateTime(today.Year, today.Month, 7), Amount = 1050, Category = ExpenseCategory.Housing, Subject = "Rent" });
+            expensesRepository.Add(new Expense { Date = new DateTime(today.Year, today.Month, 13), Amount = 870, Category = ExpenseCategory.Entertainment, Subject = "New TV" });
+
+            services.AddSingleton<IRepository<Expense>>(expensesRepository);
+        }
     }
 }

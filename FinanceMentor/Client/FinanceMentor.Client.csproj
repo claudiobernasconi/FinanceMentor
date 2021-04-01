@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Shared\FinanceMentor.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

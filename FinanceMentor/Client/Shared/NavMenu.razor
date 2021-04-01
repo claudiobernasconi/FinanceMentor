@@ -1,11 +1,13 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">FinanceMentor</a>
+    <a class="navbar-brand" href="">
+        <img src="images/logo200px.png" alt="Logo" />
+    </a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+<div class="@NavMenuCssClass nav-menu" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
@@ -15,6 +17,11 @@
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="earnings">
                 <span class="oi oi-briefcase" aria-hidden="true"></span> Earnings
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="expenses">
+                <span class="oi oi-dollar" aria-hidden="true"></span> Expenses
             </NavLink>
         </li>
     </ul>
