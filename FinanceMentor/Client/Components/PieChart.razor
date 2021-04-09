@@ -1,0 +1,23 @@
+﻿@using FinanceMentor.Client.Services;
+
+<div>
+    <div style="margin-top: 15px; margin-right: 90px; text-align: center;"><b>@Data.Label</b></div>
+    <RadzenChart>
+        <RadzenPieSeries Fills="@Colors"
+                         Data="@Data.Data"
+                         Title="@Data.Label"
+                         CategoryProperty="Category"
+                         ValueProperty="Amount" />
+    </RadzenChart>
+</div>
+
+@code {
+    [Parameter]
+    public ICollection<string> Colors { get; set; }
+
+    [Parameter]
+    public MonthlyData Data { get; set; }
+
+    [Parameter]
+    public string Label { get; set; }
+}

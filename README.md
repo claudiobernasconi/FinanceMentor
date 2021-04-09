@@ -16,6 +16,7 @@ There is a commit after every video of the [FREE Blazor Crash Course](https://ww
 | 3 | [API Handling](https://www.youtube.com/watch?v=XW2MfdKDNsY&list=PLwISgxnkpZGL_LhTQCWwp-WCzupv7lcp0&index=4) | 13:00 | fa74e54200239ebc5ec7536ed105ec65fa2a7d0a |
 | 4 | [Modal Dialog Component](https://www.youtube.com/watch?v=udb6DNKZyhU&list=PLwISgxnkpZGL_LhTQCWwp-WCzupv7lcp0&index=4) | 12:41 | 3a7907909c1249a273705394c4520c3fb320dcbe |
 | 5 | [CSS Handling](https://www.youtube.com/watch?v=_yn22LpFitk&list=PLwISgxnkpZGL_LhTQCWwp-WCzupv7lcp0&index=5) | 10:30 | 53773089cf48ea12d0816d83fde5c6bdfa8d1e10 |
+| 6 | [How to Use Images](X) | 09:38 | X |
 
 The course is still ongoing. Every week, there will be another video released.
 
