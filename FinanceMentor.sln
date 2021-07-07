@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceMentor.Client", "Fin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinanceMentor.Shared", "FinanceMentor\Shared\FinanceMentor.Shared.csproj", "{34C805F7-3510-42D7-A399-38501A7D27CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceMentor.Test", "FinanceMentor.Test\FinanceMentor.Test.csproj", "{3663F8A1-13FB-406E-9617-0BFE271C8D9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{34C805F7-3510-42D7-A399-38501A7D27CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34C805F7-3510-42D7-A399-38501A7D27CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34C805F7-3510-42D7-A399-38501A7D27CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3663F8A1-13FB-406E-9617-0BFE271C8D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3663F8A1-13FB-406E-9617-0BFE271C8D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3663F8A1-13FB-406E-9617-0BFE271C8D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3663F8A1-13FB-406E-9617-0BFE271C8D9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿@using FinanceMentor.Shared;
 @inject HttpClient Http; 
 
-<div class="card">
+<div id="earnings-container" class="card">
     <div class="card-header">
         Add an earning
     </div>
@@ -33,7 +33,7 @@
                 <InputNumber class="form-control" id="amountInput" @bind-Value="earning.Amount" />
             </div>
             <div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" id="submitEarning" class="btn btn-primary">Submit</button>
             </div>
         </EditForm>
     </div>
