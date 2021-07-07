@@ -18,8 +18,9 @@ There is a commit after every video of the [FREE Blazor Crash Course](https://ww
 | 5 | [CSS Handling](https://www.youtube.com/watch?v=_yn22LpFitk&list=PLwISgxnkpZGL_LhTQCWwp-WCzupv7lcp0&index=5) | 10:30 | 53773089cf48ea12d0816d83fde5c6bdfa8d1e10 |
 | 6 | [How to Use Images](https://www.youtube.com/watch?v=9mOBOBvx5eU) | 09:38 | e30d686bc5c43670051ae54a461d59514a1e9fa0 |
 | 7 | [Building a Dashboard](https://www.youtube.com/watch?v=qGctTw3Pw48) | 16:19 | 8c9ee42609753d5ea4c6d7eee57d29cd83a45397 |
+| 8 | [End-to-End UI Testing](https://youtu.be/YTyQH5-cNY8) | 14:24 | b36f69f208a0e195e64f68d709a4678852262132 |
 
-The course is completed for now. You can watch almost 90 minutes of FREE video in this [playlist](https://www.youtube.com/playlist?list=PLwISgxnkpZGL_LhTQCWwp-WCzupv7lcp0).
+The course is completed for now. You can watch over 100 minutes of FREE video in this [playlist](https://www.youtube.com/playlist?list=PLwISgxnkpZGL_LhTQCWwp-WCzupv7lcp0).
 
 ## How to Navigate
 You can checkout a specific commit with the following command:
